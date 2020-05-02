@@ -11,4 +11,8 @@ $(document).ready(function () {
     var dateHeading = $("#currentDay");
     dateHeading.text(currentDate);
 
+    var plans = JSON.parse(localStorage.getItem("plans"));
+
+    console.log(plans);
+
 });
