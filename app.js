@@ -106,6 +106,7 @@ $(document).ready(function () {
     // listens for user click
     $(document).on('click', 'i', function (event) {
         event.preventDefault();
+        alert("You're Input has been Saved")
 
         var index = $(this).attr('save-id');
         var inputId = '#input-' + index;
