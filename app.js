@@ -1,5 +1,7 @@
 $(document).ready(function () {
     var currentDate = moment().format('MMMM Do YYYY');
+    console.log(currentDate);
+
     var Hour24 = moment().format('H');
     var Hour12 = moment().format('h');
     var dateHeading = $('#currentDay');
@@ -11,6 +13,8 @@ $(document).ready(function () {
     // Checks for Local Storage Data
     if (storedPlans !== null) {
         var planTextArr = storedPlans;
+    } else {
+        planTextArr = new Array(9);
     }
 
 
@@ -61,7 +65,6 @@ $(document).ready(function () {
         dailyPlanSpn.attr('hour-index', index);
         dailyPlanSpn.attr('type', 'text');
         dailyPlanSpn.attr('class', 'dailyPlan');
-
         dailyPlanSpn.val(planTextArr[index]);
 
         var col9IptDiv = $('<div>');
