@@ -10,7 +10,7 @@ $(document).ready(function () {
 
     // Checks for Local Storage Data
     if (storedPlans !== null) {
-        planTextArr = storedPlans;
+        var planTextArr = storedPlans;
     }
 
 
